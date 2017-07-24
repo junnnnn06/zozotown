@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/*-------------------------------------
+SITE :http://zozo.jp/
+CREDIT :DESIGN BY STARTTODAY CO.,LTD.
+CREATE :2016.09.29
+MODIFIED :2017.06.07
+Ver :1.0
+MEMO :2017.06.07 特別価格アイテム修正
+MEMO :2016.12.09 特別価格アイテムにツケ払い告知
+MEMO :2016.09.29 特別価格アイテム
+-------------------------------------*/
+
+#rightContentMain #favoriteDiscount { border-bottom: none; margin:27px 0 0 0; padding:0; position:relative; }
+#rightContentMain #favoriteDiscount .discountLimit { background:url(//img4.zozo.jp/pc/default_2015/discount_favorite/ribbon_pk.png) no-repeat; height:72px; left:24px; top:-8px; width:41px; position:absolute; }
+#rightContentMain #favoriteDiscount #favDiscountWrap { padding:0 16px 25px 16px; background:#f3f2f3; }
+#rightContentMain #favoriteDiscount .sectionHeader { text-align:center; }
+#rightContentMain #favoriteDiscount .sectionHeader h2 { padding:13px 0 0 0; font-size:20px; }
+#rightContentMain #favoriteDiscount .sectionHeader h2 .caption { display:block; font-size:14px; }
+#rightContentMain #favoriteDiscount .sectionHeader .discountLimitTime { border-bottom:1px solid #dddddd; font-size:12px; color:#e73656; line-height:1.2; width:508px; margin: 5px 0 0px 0;  padding: 0 0 16px 0; }
+
+#rightContentMain #favoriteDiscount .sectionHeader .tukeBar{  background: #ffffff; font-size: 14px; margin: 20px 0 0 -70px; padding: 10px 10px 8px; text-align: center; }
+#rightContentMain #favoriteDiscount .sectionHeader .tukeBar a{ font-size:10px; margin: 0 0 0 5px; }
+/*アイテム2件以上*/
+#rightContentMain #favoriteDiscount .itemList { margin:0 0 0 -20px; }
+#rightContentMain #favoriteDiscount .itemList .feedPicture { float:left; width:156px; margin:15px 0 0 20px; }
+#rightContentMain #favoriteDiscount .itemList .feedPicture a:hover { text-decoration:none; }
+#rightContentMain #favoriteDiscount .itemList .goodsH { overflow:hidden; margin:5px 0 0; white-space:nowrap; text-overflow:ellipsis; color:#6f6f6f; }
+#rightContentMain #favoriteDiscount .itemList .goodsPrice { line-height:1.1; margin-top:0; }
+#rightContentMain #favoriteDiscount .itemList .goodsPrice.discount .goodsPriceAmount { font-size:14px; color:#e73656 !important; }
+#rightContentMain #favoriteDiscount .itemList .goodsPrice.discount .goodsPriceAmount .tax { color:#e73656 !important; }
+#rightContentMain #favoriteDiscount .itemList .goodsPrice.discount .goodsPriceMeta { margin: 2px 0 0 4px; color:#e73656 !important; }
+
+/*アイテム1件*/
+#rightContentMain #favoriteDiscount .itemList #favOneItem { margin:15px 0 0 0; }
+#rightContentMain #favoriteDiscount .itemList #favOneItem .feedPicture {float:left; margin:0 15px 0 0; }
+#rightContentMain #favoriteDiscount .itemList #favOneItem .itemDetail { float:left; width:335px; margin:3px 0 0 0; }
+#rightContentMain #favoriteDiscount .itemList #favOneItem .brand { font-size:14px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; color:#6f6f6f; }
+#rightContentMain #favoriteDiscount .itemList #favOneItem .goodsH { font-size:16px; white-space:normal; text-overflow:clip; }
+#rightContentMain #favoriteDiscount .itemList #favOneItem .priceName { font-size:13px; margin:15px 0 0 0; color:#e73656; }
+#rightContentMain #favoriteDiscount .itemList #favOneItem .goodsPriceAmount { font-size:18px; margin:3px 0 0 0; }
+#rightContentMain #favoriteDiscount .itemList #favOneItem .goodsPriceMeta { font-size:12px; display:inline; }
+
+/*一覧リンク*/
+#rightContentMain #favoriteDiscount .gBtn { background-color:#ff0056; border-radius:4px; margin:18px auto 0; width:220px; }
+
