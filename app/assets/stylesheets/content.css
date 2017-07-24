@@ -1111,7 +1111,7 @@ html>/**/body #searchSidebar .sideBox ul li.current a{  padding: 4px 3px 2px\9; 
 #searchSidebar #colorSelect{ margin:0; padding:6px 0 0; }
 #searchSidebar #colorSelect li{float:left; width:50%; margin: 8px 0 0; }
 *:first-child+html #searchSidebar #colorSelect li{ width:49%; }
-#searchSidebar #colorSelect li a{font-size:11px; line-height:1.455; padding: 0 0 0 0 line-height:20px; padding:2px 3px;}
+#searchSidebar #colorSelect li a{font-size:11px; line-height:1.455; padding: 0 0 0 0 ; line-height:20px; padding:2px 3px; }
 #searchSidebar #colorSelect li a .ico_color{ display:block; width:18px; height:0; padding:18px 0 0; margin: 0 3px 0 0; float:left; overflow:hidden; background:url(/common_2015/img/ico/ico_color.gif); }
 
 #searchSidebar #colorSelect li a span.c1 { background-position: 0      0; }
