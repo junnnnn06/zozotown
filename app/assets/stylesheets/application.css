@@ -12,6 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
-
+@import "./font-awesome"
+@import "./topbar"
+@import "./leftbar"
+@import "./rightbar"
+@import "./content"
+@import "./body"

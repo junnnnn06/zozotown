@@ -1,0 +1,40 @@
+.rightbar {
+  float: right;
+  padding-right: 160px;
+  .adver {
+
+  }
+  .news {
+
+    &__title {
+      p.title {
+        background: linear-gradient(transparent 60%, #ffff66 60%);
+        font-size: 18px;
+        color: black;
+        border-bottom: none;
+      }
+      p {
+        font-size: 14px;
+        color: #222222;
+        -webkit-font-smoothing: antialiased;
+        border-bottom:1px dotted black;
+      }
+    }
+  }
+  .info {
+    &__title {
+      p.title {
+        background: linear-gradient(transparent 60%, #ffff66 60%);
+        font-size: 18px;
+        color: black;
+        border-bottom: none;
+      }
+      p {
+        font-size: 14px;
+        color: #222222;
+        -webkit-font-smoothing: antialiased;
+        border-bottom:1px dotted black;
+      }
+    }
+  }
+}

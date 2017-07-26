@@ -1,0 +1,11 @@
+!!!
+.html
+  .head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title zozotown
+  %body
+    = render "topbar", items:@items
+    = render "leftbar"
+    = render "content"
+    = render "rightbar"

@@ -1,0 +1,47 @@
+.content {
+  float: left;
+  height: 100%;
+  width: calc(100vw - 650px);
+
+  .new_item {
+
+    &__title {
+      font-size: 18px;
+      color: black;
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+
+    &__image{
+
+    }
+  }
+
+  .recommended {
+
+    &__title {
+      font-size: 18px;
+      color: black;
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+
+    &__image {
+
+    }
+  }
+
+  .ranking {
+
+    &__title {
+      font-size: 18px;
+      color: black;
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+
+    &__image {
+
+    }
+  }
+}

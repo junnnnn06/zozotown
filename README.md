@@ -12,7 +12,13 @@
 - has_many :items
 - has_many :orders
 - has_many :favorites
--
+
+## admitテーブル
+|Column|type|option|
+|------|----|------|
+
+## Association
+
 
 ## orderテーブル
 |Column|type|option|
