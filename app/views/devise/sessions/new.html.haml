@@ -1,0 +1,21 @@
+.log-in-page
+  .login-info
+    ユーザー情報入力
+  .entry-form
+    .h2 ログイン
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field
+        = f.label :メールアドレス
+        %br/
+        = f.email_field :email, autofocus: true, class: "text-field"
+      .field
+        = f.label :パスワード
+        %br/
+        = f.password_field :password, autocomplete: "off", class: "text-field"
+      - if devise_mapping.rememberable?
+        .field
+          = f.check_box :remember_me
+          = f.label :remember_me
+      .actions
+        = f.submit "Log in"
+        = render "devise/shared/links"
