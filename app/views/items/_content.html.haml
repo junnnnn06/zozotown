@@ -3,10 +3,14 @@
     .new_item__title
       新作商品
     .new_item__images
+      - items.each do |items|
+        = image_tag items.image
   .recommended
     .recommended__title
       おすすめ商品
     .recommended__images
+      - products.each do |products|
+        = image_tag products.image
 
   .ranking
     .ranking__title

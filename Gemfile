@@ -43,6 +43,9 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :production do
@@ -67,5 +70,5 @@ gem 'rails_admin'
 gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
-
-
+gem 'carrierwave'
+gem 'mini_magick'

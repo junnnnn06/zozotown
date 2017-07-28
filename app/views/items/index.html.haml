@@ -5,7 +5,7 @@
     %meta{:charset => "UTF-8"}/
     %title zozotown
   %body
-    = render "topbar", items:@items
+    = render "topbar"
     = render "leftbar"
-    = render "content"
-    = render "rightbar"
+    = render "content", products: @products,items: @items
+    = render "rightbar", product: @product,item: @item

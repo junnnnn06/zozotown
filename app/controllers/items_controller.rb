@@ -1,15 +1,28 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:index]
 
   def index
-    @items = Item.new
-    # if current_user.customer? || current_user.sys_admin?
-    # else
-    #   render 403
-    # end
+    @item = Item.new
+    @items = Item.all
+    @product = Item.new
+    @products = Item.all
   end
 
   def new
+  end
+
+  def create
+    @item = Item.create(item_params)
+    @product = Item.create(item_params)
+      redirect_to root_path
+  end
+
+  private
+  def item_params
+    params.require(:item).permit(:image)
+  end
+
+  def image_cache
+    params.require(:item).permit(:image)
   end
 
 end

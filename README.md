@@ -2,8 +2,6 @@
 
 |Column|type|option|
 |------|----|------|
-|gender|string|null: false|
-|birth|stirng|null: false|
 |adress|string|null: false|
 |email|string|null: false|
 |password|integer|null: false|
@@ -12,13 +10,6 @@
 - has_many :items
 - has_many :orders
 - has_many :favorites
-
-## admitテーブル
-|Column|type|option|
-|------|----|------|
-
-## Association
-
 
 ## orderテーブル
 |Column|type|option|
