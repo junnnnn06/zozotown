@@ -3,8 +3,6 @@ class ItemsController < ApplicationController
   def index
     @item = Item.new
     @items = Item.all
-    @product = Item.new
-    @products = Item.all
   end
 
   def new
@@ -12,7 +10,6 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create(item_params)
-    @product = Item.create(item_params)
       redirect_to root_path
   end
 

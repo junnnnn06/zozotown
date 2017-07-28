@@ -43,36 +43,6 @@
 ## Association
 - belongs_to :category
 - bolongs_to :user
-- belongs_to :item cart
-- has_many :image
-
-## item cartsテーブル
-|Column|type|option|
-|------|----|------|
-|name|string|null: false|
-
-## Association
-- has_many :items
-- belongs_to :user
-- has_many :purchase, through: datails
-
-## purchaseテーブル
-|Column|type|option|
-|------|----|------|
-|code|integer|null: false|
-
-## Association
-- has_many :item_cart, through: details
-
-## detailsテーブル
-|Column|type|option|
-|------|----|------|
-|item_cart_id|integer|null: false, foreign_key :true|
-|purchase_id|integer|null: false, foreign_key :true|
-
-## Association
-- belongs_to :item_cart
-- belongs_to :purchase
 
 favaritesテーブル
 ||Column|type|option|
@@ -83,12 +53,3 @@ favaritesテーブル
 
 ## Association
 - belongs_to :user
-
-## imageテーブル
-|Column|type|option|
-|------|----|------|
-|image|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
-
-## Association
-- belongs_to :item

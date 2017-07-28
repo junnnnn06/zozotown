@@ -26,14 +26,8 @@
         おすすめ2
       %p.favo3
         おすすめ3
-      = form_for(product) do |f|
-        .field-label
-          =f.label :image do
-            %p おすすめ4
-            = f.file_field :image, class: "field-label__image", style: "display: none"
-        .field-label
-          = button_tag type: 'submit', class: "field-label__btn" do
-            %i.fa.fa-wrench
+      %p.favo4
+        おすすめ4
 
       = form_for(item) do |f|
         .field-label
@@ -41,5 +35,5 @@
             %p おすすめ5
             = f.file_field :image, class: "field-label__image", style: "display: none"
         .field-label
-          = button_tag type: 'submit', class: "field-label__btn" do
+          = button_tag type: 'submit', name: 'news', class: "field-label__btn" do
             %i.fa.fa-wrench

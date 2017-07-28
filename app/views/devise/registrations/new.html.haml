@@ -2,16 +2,20 @@
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = devise_error_messages!
   .field
-    = f.label :email
+    = f.label :ニックネーム
+    %br/
+    = f.email_field :name, autofocus: true
+  .field
+    = f.label :メールアドレス
     %br/
     = f.email_field :email, autofocus: true
   .field
-    = f.label :password
+    = f.label :パスワード
     - if @minimum_password_length
       %em
         (#{@minimum_password_length} characters minimum)
     %br/
-    = f.password_field :password, autocomplete: "off"
+    = f.password_field :確認用パスワード, autocomplete: "off"
   .field
     = f.label :password_confirmation
     %br/
