@@ -1,0 +1,39 @@
+.register-page
+  .title
+    .title__content
+      %i.fa.fa-id-card
+      %p.explain
+        商品登録画面
+  .date
+    .data__info
+      .field
+        = form_for(@item) do |f|
+          .field-label
+            =f.label :image do
+              %p 画像を選択
+              = f.file_field :image, class: "field-label__image"
+          .field-label
+            = f.label :name, value: "商品名"
+            = f.text_field :name
+          .field-label
+            = f.label :price, value: "値段"
+            = f.text_field :price
+          .field-label
+            = f.label :description, value: "商品説明"
+            = f.text_field :description
+          .field-label
+            = f.label :count, value: "在庫数"
+            = f.text_field :count
+          .field-label
+            = f.label :number, value: "品番"
+            = f.text_field :number
+          .field-label
+            = f.label :recommend, value: "おすすめ商品"
+            = f.text_field :recommend
+          .field-label
+            = f.label :popular, value: "夏の人気商品"
+            = f.text_field :popular
+          .field-label
+            以上の内容を登録→
+            = button_tag type: 'submit', name: 'news', class: "field-label__btn" do
+              %i.fa.fa-paper-plane

@@ -1,18 +1,27 @@
 .content {
   float: left;
   height: 100%;
-  width: calc(100vw - 650px);
+  width: calc(100vw - 800px);
+  padding-left: 100px;
 
   .new_item {
 
-    &__title {
+    .new_item__title {
       font-size: 18px;
       color: black;
       padding-top: 20px;
       padding-left: 20px;
+      font-style: oblique;
+      margin-bottom: 20px;
+      border-left :solid 5px orange;
+      border-bottom: solid 1px gray;
+      padding: 10px
     }
 
-    &__image{
+    .new_item__image {
+      .new_item__image_image {
+        float: left;
+      }
     }
   }
 
@@ -23,10 +32,18 @@
       color: black;
       padding-top: 20px;
       padding-left: 20px;
+      clear: both;
+      font-style: oblique;
+      margin-bottom: 20px;
+      border-left :solid 5px orange;
+      border-bottom: solid 1px gray;
+      padding: 10px
     }
 
-    &__image {
-
+    .recommended__images {
+      .recommended__images_image {
+        float: left;
+      }
     }
   }
 
@@ -37,10 +54,18 @@
       color: black;
       padding-top: 20px;
       padding-left: 20px;
+      clear: both;
+      font-style: oblique;
+      margin-bottom: 20px;
+      border-left :solid 5px orange;
+      border-bottom: solid 1px gray;
+      padding: 10px
     }
 
-    &__image {
-
+    .ranking__image {
+      .ranking__image_image {
+        float: left;
+      }
     }
   }
 }

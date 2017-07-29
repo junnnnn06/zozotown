@@ -1,6 +1,6 @@
 .rightbar
   .adver
-    
+
   .news
     .news__title
       %p.title
@@ -28,12 +28,6 @@
         おすすめ3
       %p.favo4
         おすすめ4
+      %p.favo
+        おすすめ5
 
-      = form_for(item) do |f|
-        .field-label
-          =f.label :image do
-            %p おすすめ5
-            = f.file_field :image, class: "field-label__image", style: "display: none"
-        .field-label
-          = button_tag type: 'submit', name: 'news', class: "field-label__btn" do
-            %i.fa.fa-wrench

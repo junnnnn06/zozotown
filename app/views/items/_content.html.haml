@@ -2,16 +2,35 @@
   .new_item
     .new_item__title
       新作商品
-    .new_item__images
-      - items.each do |items|
-        = image_tag items.image
+    .new_item__image
+      - iteems.each do |iteems|
+        .new_item__image_image
+          = image_tag iteems.image
+          %p.new_item__image_name
+            = iteems.name
+          %p.new_item__image_price
+            #{ iteems.price } 円 ( 税込 20%off! )
+
   .recommended
     .recommended__title
       おすすめ商品
     .recommended__images
-      = image_tag "assets/images/pic.jpg"
+      - items.each do |items|
+        .recommended__images_image
+          = image_tag items.image
+          %p.recommended__images_name
+            = items.name
+          %p.recommended__images_price
+            #{ items.price } 円 ( 税込 15%off!)
 
   .ranking
     .ranking__title
-      ランキング
+      夏の人気アイテム
     .ranking__image
+      - item.each do |item|
+        .ranking__image_image
+          = image_tag item.image
+          %p.ranking__image_name
+            = item.name
+          %p.ranking__image_price
+            #{ item.price } 円 (税込 18%off!)

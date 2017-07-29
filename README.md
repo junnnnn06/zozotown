@@ -2,6 +2,7 @@
 
 |Column|type|option|
 |------|----|------|
+|nickname|string|null: false|
 |adress|string|null: false|
 |email|string|null: false|
 |password|integer|null: false|
@@ -22,6 +23,7 @@
 
 ## Association
 - belongs_to :user
+- has_many :items
 
 
 ## categoryテーブル
@@ -38,11 +40,15 @@
 |name|string|null: false|
 |body|text|------|
 |image|text|------|
-|price|string|null: false|
+|price|integer|null: false|
+|description|text|------|
+|count|integer|null: false|
+|number|integer|null: false, unique: true|
 
 ## Association
 - belongs_to :category
-- bolongs_to :user
+- belongs_to :user
+- belongs_to :order
 
 favaritesテーブル
 ||Column|type|option|

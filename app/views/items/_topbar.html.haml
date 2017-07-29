@@ -11,6 +11,9 @@
   = link_to new_user_registration_path do
     %i.fa.fa-sign-out
   = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn2'
+  = link_to edit_item_path(current_user) do
+    %i.fa.fa-cog
+
 
 .subbar
   %p.all
