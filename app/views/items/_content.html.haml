@@ -3,34 +3,34 @@
     .new_item__title
       新作商品
     .new_item__image
-      - iteems.each do |iteems|
+      - item_all.each do |item|
         .new_item__image_image
-          = image_tag iteems.image
+          = image_tag item.image
           %p.new_item__image_name
-            = iteems.name
+            = link_to item.name, item_path(item.id)
           %p.new_item__image_price
-            #{ iteems.price } 円 ( 税込 20%off! )
+            #{ item.price } 円 ( 税込 20%off! )
 
   .recommended
     .recommended__title
       おすすめ商品
     .recommended__images
-      - items.each do |item|
+      - item_recommend.each do |item|
         .recommended__images_image
           = image_tag item.image
           %p.recommended__images_name
-            = link_to item.name, item_path(current_user)
+            = link_to item.name, item_path(item.id)
           %p.recommended__images_price
-            #{ item.price } 円 ( 税込 15%off!)
+            #{ item.price } 円 ( 税込 15%off! )
 
   .ranking
     .ranking__title
       夏の人気アイテム
     .ranking__image
-      - item.each do |item|
+      - item_ranking.each do |item|
         .ranking__image_image
           = image_tag item.image
           %p.ranking__image_name
-            = item.name
+            = link_to item.name, item_path(item.id)
           %p.ranking__image_price
-            #{ item.price } 円 (税込 18%off!)
+            #{ item.price } 円 (税込 18%off! )

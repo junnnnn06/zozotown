@@ -1,0 +1,35 @@
+= render 'topbar'
+
+.shopping
+  .cart
+    .cart__title
+      ご注文ありがとうございます。<br>
+      チェックしたアイテム
+    .cart__info
+      .cart__info_image
+        = image_tag @item.image
+      .cart__info_detail
+        .cart__info_detail_name
+          商品名 #{ @item.name }
+        .cart__info_detail_count
+          在庫数: #{ @item.count }
+        .cart__info_detail_description
+          商品概要: #{ @item.description }
+        .cart__info_detail_price
+          小計　¥ #{ @item.price }
+
+  .bill
+    .bill__pay
+      商品金額 ¥ #{ @item.price }
+    .bill__postage
+      送料　　¥250
+    .bill__commission
+      手数料　¥250
+    .bill__sum
+      合計金額 ¥ #{ @item.price + 500 }
+
+  .check
+    .check__complete
+      この商品を購入する
+    .check__return
+      購入をキャンセルする

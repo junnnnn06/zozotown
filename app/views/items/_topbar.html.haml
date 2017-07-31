@@ -1,10 +1,6 @@
 .topbar
   %p.sitename
-    ZOZOTOWN
-  -# %format
-  -#   = form_for(@items) do |f|
-  -#     = f.text_field :body, placeholder: "何かお探しですか?", class: "field-label__input"
-
+    = link_to image_tag("zozotown_logo.jpg"), root_path
 
   = link_to new_user_session_path do
     %i.fa.fa-user
@@ -13,7 +9,6 @@
   = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn2'
   = link_to new_item_path(current_user) do
     %i.fa.fa-cog
-
 
 .subbar
   %p.all
