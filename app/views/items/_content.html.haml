@@ -15,13 +15,13 @@
     .recommended__title
       おすすめ商品
     .recommended__images
-      - items.each do |items|
+      - items.each do |item|
         .recommended__images_image
-          = image_tag items.image
+          = image_tag item.image
           %p.recommended__images_name
-            = items.name
+            = link_to item.name, item_path(current_user)
           %p.recommended__images_price
-            #{ items.price } 円 ( 税込 15%off!)
+            #{ item.price } 円 ( 税込 15%off!)
 
   .ranking
     .ranking__title
