@@ -25,6 +25,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+
   end
 
   private
@@ -34,6 +35,7 @@ class ItemsController < ApplicationController
   end
 
   def set_item
+
   end
 
   # def image_cache

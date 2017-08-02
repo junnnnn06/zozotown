@@ -19,7 +19,7 @@
         .recommended__images_image
           = image_tag item.image
           %p.recommended__images_name
-            = link_to item.name, item_path(item.id)
+            = link_to item.name, item_path(item.id, current_user)
           %p.recommended__images_price
             #{ item.price } 円 ( 税込 15%off! )
 
@@ -31,6 +31,6 @@
         .ranking__image_image
           = image_tag item.image
           %p.ranking__image_name
-            = link_to item.name, item_path(item.id)
+            = link_to item.name
           %p.ranking__image_price
             #{ item.price } 円 (税込 18%off! )

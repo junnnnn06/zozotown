@@ -30,6 +30,6 @@
 
   .check
     .check__complete
-      この商品を購入する
+      = link_to  "この商品を購入する", item_orders_path(@item.id,current_user.id), method: :POST,class: "btn_submit"
     .check__return
       = link_to "購入をキャンセルする", root_path
