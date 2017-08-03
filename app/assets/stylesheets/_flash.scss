@@ -1,6 +1,11 @@
 .flash {
   color: white;
   text-align: center;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  line-height: 50px;
   &__alert{
     background-color: green;
   }
