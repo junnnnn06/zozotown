@@ -15,7 +15,6 @@
  *= require font-awesome
  */
 
-@import "./font-awesome";
 @import "./topbar";
 @import "./leftbar";
 @import "./rightbar";
