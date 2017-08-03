@@ -37,8 +37,4 @@ class ItemsController < ApplicationController
 
   end
 
-  # def image_cache
-  #   params.require(:item).permit(:image)
-  # end
-
 end
