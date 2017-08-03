@@ -75,4 +75,35 @@
       text-align: center;
     }
   }
+
+  .sold-out {
+    &__title {
+      text-align: center;
+      border-bottom:1px solid #BBBBBB;
+    }
+    &__info {
+      padding-top: 40px;
+      line-height: 4.0em;
+      .sold-out__info_image {
+        float: left;
+      }
+      .sold-out__info_detail {
+        float: left;
+        padding-left: 30px;
+        .sold-out__info_detail_link {
+          margin-left: 100px;
+          height: 50px;
+          width: 200px;
+          font-size: 16px;
+          color: white;
+          background-color: #38AEF0;
+          border: none;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          line-height: 50px;
+          text-align: center;
+        }
+      }
+    }
+  }
 }

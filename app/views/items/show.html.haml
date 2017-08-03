@@ -1,35 +1,56 @@
 = render 'topbar'
 
 .shopping
-  .cart
-    .cart__title
-      ご注文ありがとうございます。<br>
-      チェックしたアイテム
-    .cart__info
-      .cart__info_image
-        = image_tag @item.image
-      .cart__info_detail
-        .cart__info_detail_name
-          商品名 #{ @item.name }
-        .cart__info_detail_count
-          在庫数: #{ @item.count }
-        .cart__info_detail_description
-          商品概要: #{ @item.description }
-        .cart__info_detail_price
-          小計　¥ #{ @item.price }
+  - if @item.count >= 1
+    .cart
+      .cart__title
+        ご注文ありがとうございます。<br>
+        チェックしたアイテム
+      .cart__info
+        .cart__info_image
+          = image_tag @item.image
+        .cart__info_detail
+          .cart__info_detail_name
+            商品名 #{ @item.name }
+          .cart__info_detail_count
+            在庫数: #{ @item.count }
+          .cart__info_detail_description
+            商品概要: #{ @item.description }
+          .cart__info_detail_price
+            小計　¥ #{ @item.price }
 
-  .bill
-    .bill__pay
-      商品金額 ¥ #{ @item.price }
-    .bill__postage
-      送料　　¥250
-    .bill__commission
-      手数料　¥250
-    .bill__sum
-      合計金額 ¥ #{ @item.price + 500 }
+    .bill
+      .bill__pay
+        商品金額 ¥ #{ @item.price }
+      .bill__postage
+        送料　　¥250
+      .bill__commission
+        手数料　¥250
+      .bill__sum
+        合計金額 ¥ #{ @item.price + 500 }
 
-  .check
-    .check__complete
-      = link_to  "この商品を購入する", item_orders_path(@item.id,current_user.id), method: :POST,class: "btn_submit"
-    .check__return
-      = link_to "購入をキャンセルする", root_path
+    .check
+      .check__complete
+        = link_to  "この商品を購入する", item_orders_path(@item.id,current_user.id), method: :POST, class: "btn_submit"
+      .check__return
+        = link_to "購入をキャンセルする", root_path
+
+  - else @item.count = 0
+    .sold-out
+      .sold-out__title
+        ご注文いただきました商品は現在品切れとなっております。<br>
+        入荷までお待ちください。
+      .sold-out__info
+        .sold-out__info_image
+          = image_tag("sold_out2.jpg")
+        .sold-out__info_detail
+          .sold-out__info_detail_name
+            商品名: #{ @item.name }
+          .sold-out__info_detail_count
+            在庫数: #{ @item.count }
+          .sold-out__info_detail_description
+            商品概要: #{ @item.description }
+          .sold-out__info_detail_price
+            小計　¥ #{ @item.price }
+          .sold-out__info_detail_link
+            = link_to "前画面に戻る", root_path, class: "btn_return"
