@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
 
-  p .sitename img {
+  p.sitename img {
     padding-left: 200px;
     height: 50px;
     width: 120px;
@@ -14,7 +14,7 @@
     top: 0;
   }
 
-  i .fa .fa-user {
+  i.fa.fa-user {
     color: white;
     position: absolute;
     top: 18px;
@@ -22,7 +22,7 @@
     font-size: 30px;
   }
 
-  i .fa .fa-sign-out {
+  i.fa.fa-sign-out {
     position: absolute;
     top: 18px;
     right: 190px;
@@ -39,7 +39,7 @@
     color: white;
   }
 
-  i .fa .fa-cog {
+  i.fa.fa-cog {
     font-size: 20px;
     font-style: oblique;
     position: absolute;
