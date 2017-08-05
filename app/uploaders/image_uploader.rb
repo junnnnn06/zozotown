@@ -8,12 +8,17 @@ class ImageUploader < CarrierWave::Uploader::Base
  # 画像の上限を200pxにする
   process :resize_to_limit => [200, 200]
 
+  storage :fog
   # 保存形式をJPGにする
   process :convert => 'jpg'
 
   # サムネイルを生成する設定
   version :thumb do
     process :resize_to_limit => [300, 300]
+  end
+
+  def store_dir
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
   # jpg,jpeg,gif,pngしか受け付けない
