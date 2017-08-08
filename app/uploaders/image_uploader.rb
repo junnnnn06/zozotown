@@ -21,9 +21,9 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  # jpg,jpeg,gif,pngしか受け付けない
+  # jpg,jpeg,gif,png,svgしか受け付けない
   def extension_white_list
-    %w(jpg jpeg gif png)
+    %w(jpg jpeg gif png svg)
   end
 
  # 拡張子が同じでないとGIFをJPGとかにコンバートできないので、ファイル名を変更
