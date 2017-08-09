@@ -21,6 +21,25 @@
     right: 250px;
     font-size: 30px;
   }
+  .box1 {
+    position: absolute;
+    width: 55px;
+    height: 35px;
+    top: 55px;
+    right: 240px;
+    background-color: #FFEEFF;
+    display: none;
+  }
+
+  .text1 {
+    position: absolute;
+    font-size: 11px;
+    top: -1px;
+    right: 5px;
+  }
+  i.fa.fa-user:hover + .box1 {
+    display: block;
+  }
 
   i.fa.fa-sign-in {
     position: absolute;
@@ -30,6 +49,27 @@
     color: white;
   }
 
+  .box2 {
+    position: absolute;
+    width: 55px;
+    height: 35px;
+    top: 55px;
+    right: 180px;
+    background-color: #FFEEFF;
+    display: none;
+  }
+
+  .text2 {
+    position: absolute;
+    font-size: 11px;
+    top: -1px;
+    right: 5px;
+  }
+
+  i.fa.fa-sign-in:hover + .box2 {
+    display: block;
+  }
+
   i.fa.fa-sign-out {
     font-size: 30px;
     font-style: oblique;
@@ -37,6 +77,27 @@
     top: 18px;
     right: 120px;
     color: white;
+  }
+
+  .box3 {
+    position: absolute;
+    width: 60px;
+    height: 35px;
+    top: 55px;
+    right: 110px;
+    background-color: #FFEEFF;
+    display: none;
+  }
+
+  .text3 {
+    position: absolute;
+    font-size: 11px;
+    top: -1px;
+    right: 3px;
+  }
+
+  i.fa.fa-sign-out:hover + .box3 {
+    display: block;
   }
 
   i.fa.fa-cog {
