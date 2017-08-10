@@ -3,24 +3,30 @@
     = link_to image_tag("zozotown_logo.jpg"), root_path
 
   = link_to "", class: "may_page" do
-    %i.fa.fa-address-card
-    
+    %i.fa.fa-address-card{"tooltips" => "マイページ<br>購入履歴<br>メールマガジン"}
+    -# .box1
+    -#   %p.tooltips
+    -#     マイページ
+    -#   %p.tooltips
+    -#     購入履歴
+    -#   %p.tooltps
+    -#     メールマガジン
 
   = link_to new_user_registration_path, class: "icon1" do
     %i.fa.fa-user
-    .box1
-      %p.text1
+    .box2
+      %p.text2
         新規登録
 
   = link_to new_user_session_path, class: "icon2" do
     %i.fa.fa-sign-in
-    .box2
-      %p.text2
+    .box3
+      %p.text3
         ログイン
   = link_to destroy_user_session_path, method: :delete, class: "icon3" do
     %i.fa.fa-sign-out
-    .box3
-      %p.text3
+    .box4
+      %p.text4
         ログアウト
   = link_to new_item_path(current_user) do
     %i.fa.fa-cog

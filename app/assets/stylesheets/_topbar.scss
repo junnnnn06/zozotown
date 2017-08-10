@@ -14,6 +14,26 @@
     top: 0;
   }
 
+  i.fa.fa-address-card {
+    color: white;
+    position: absolute;
+    top: 18px;
+    right: 315px;
+    font-size: 30px;
+  }
+
+ .box1 {
+    position: absolute;
+    font-size: 8px;
+    width: 120px;
+    height: 82px;
+    top: 49px;
+    right: 310px;
+    padding-left: 10px;
+    border: solid black 1px;
+    background-color: white;
+  }
+
   i.fa.fa-user {
     color: white;
     position: absolute;
@@ -21,23 +41,24 @@
     right: 250px;
     font-size: 30px;
   }
-  .box1 {
+  .box2 {
     position: absolute;
     width: 55px;
     height: 35px;
     top: 55px;
     right: 240px;
-    background-color: #FFEEFF;
+    border: solid black 1px;
+    background-color: white;
     display: none;
   }
 
-  .text1 {
+  .text2 {
     position: absolute;
     font-size: 11px;
     top: -1px;
     right: 5px;
   }
-  i.fa.fa-user:hover + .box1 {
+  i.fa.fa-user:hover + .box2 {
     display: block;
   }
 
@@ -49,24 +70,25 @@
     color: white;
   }
 
-  .box2 {
+  .box3 {
     position: absolute;
     width: 55px;
     height: 35px;
     top: 55px;
     right: 180px;
-    background-color: #FFEEFF;
+    border: solid black 1px;
+    background-color: white;
     display: none;
   }
 
-  .text2 {
+  .text3 {
     position: absolute;
     font-size: 11px;
     top: -1px;
     right: 5px;
   }
 
-  i.fa.fa-sign-in:hover + .box2 {
+  i.fa.fa-sign-in:hover + .box3 {
     display: block;
   }
 
@@ -79,24 +101,25 @@
     color: white;
   }
 
-  .box3 {
+  .box4 {
     position: absolute;
     width: 60px;
     height: 35px;
     top: 55px;
     right: 110px;
-    background-color: #FFEEFF;
+    border: solid black 1px;
+    background-color: white;
     display: none;
   }
 
-  .text3 {
+  .text4 {
     position: absolute;
     font-size: 11px;
     top: -1px;
     right: 3px;
   }
 
-  i.fa.fa-sign-out:hover + .box3 {
+  i.fa.fa-sign-out:hover + .box4 {
     display: block;
   }
 
