@@ -18,6 +18,7 @@
             商品概要: #{ @item.description }
           .cart__info_detail_price
             小計　¥ #{ @item.price }
+          = render 'likes/like', locals: {item: @item}
 
     .bill
       .bill__pay
