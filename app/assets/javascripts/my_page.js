@@ -1,7 +1,8 @@
 $(function(){
   $(document).ready(function() {
     $('.tooltip').tooltipster({
-      theme:'tooltipster-noir'
+      animation: 'grow',
+      speed: 6000
     });
   });
 })
