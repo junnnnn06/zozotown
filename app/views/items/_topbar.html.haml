@@ -2,8 +2,8 @@
   %p.sitename
     = link_to image_tag("zozotown_logo.jpg"), root_path
 
-  = link_to "", class: "may_page" do
-    %i.fa.fa-address-card{"tooltips" => "マイページ<br>購入履歴<br>メールマガジン"}
+  = link_to users_path, class: "may_page" do
+    %i.fa.fa-address-card{"tooltips" => "マイページ"}
     -# .box1
     -#   %p.tooltips
     -#     マイページ

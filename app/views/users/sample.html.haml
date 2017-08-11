@@ -1,0 +1,12 @@
+%body
+  .container
+    %h1 jQuery自作ツールチップのサンプル
+    %p
+      %a.my-tooltip{:href => "#", :title => "ツールチップです！"}> マウスを乗せるとツールチップ
+      が表示されます。
+      %br/
+      こちらの
+      %a.my-tooltip{:href => "#", :title => "表示されましたか？"}> リンク
+      テキストも同様です。
+  %script{:src => "./js/jquery-1.11.3.min.js", :type => "text/javascript"}
+  %script{:src => "/app/asset/javascripts/topbar.js", :type => "text/javascript"}
