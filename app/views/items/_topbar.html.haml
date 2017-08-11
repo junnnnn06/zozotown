@@ -2,32 +2,18 @@
   %p.sitename
     = link_to image_tag("zozotown_logo.jpg"), root_path
 
-  %span.tooltip{:href => root_path, :title => "マイページ"} #{ current_user.name }様
-  -# %i.fa.fa-address-card
-    -# .box1
-    -#   %p.tooltips
-    -#     マイページ
-    -#   %p.tooltips
-    -#     購入履歴
-    -#   %p.tooltps
-    -#     メールマガジン
+  .user_info
+    = current_user.name
 
-  = link_to new_user_registration_path, class: "icon1" do
-    %i.fa.fa-user
-    .box2
-      %p.text2
-        新規登録
+  = link_to new_user_registration_path, class: "icon_register" do
+    %i.fa.fa-user{:title => "新規登録"}
 
-  = link_to new_user_session_path, class: "icon2" do
-    %i.fa.fa-sign-in
-    .box3
-      %p.text3
-        ログイン
-  = link_to destroy_user_session_path, method: :delete, class: "icon3" do
-    %i.fa.fa-sign-out
-    .box4
-      %p.text4
-        ログアウト
+  = link_to new_user_session_path, class: "icon_login" do
+    %i.fa.fa-sign-in{:title => "ログイン"}
+
+  = link_to destroy_user_session_path, method: :delete, class: "icon_logout" do
+    %i.fa.fa-sign-out{:title => "ログアウト"}
+
   = link_to new_item_path(current_user) do
     %i.fa.fa-cog
 
