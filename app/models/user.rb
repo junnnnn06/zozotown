@@ -7,7 +7,8 @@ class User < ApplicationRecord
   has_many :orders
   has_many :likes
 
-  validates :encrypted_password, presence: true, uniqueness: true
+  validates :encrypted_password, presence: true, uniqueness: true,
+             length: {minimum: 8}
   validates :email, presence: true, uniqueness: true
-
+  validates :name, presence: true
 end

@@ -2,8 +2,8 @@
   %p.sitename
     = link_to image_tag("zozotown_logo.jpg"), root_path
 
-  = link_to users_path, class: "may_page" do
-    %i.fa.fa-address-card{"tooltips" => "マイページ"}
+  %span.tooltip{:href => root_path, :title => "マイページ"} #{ current_user.name }様
+  -# %i.fa.fa-address-card
     -# .box1
     -#   %p.tooltips
     -#     マイページ

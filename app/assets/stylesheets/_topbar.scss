@@ -14,25 +14,32 @@
     top: 0;
   }
 
-  i.fa.fa-address-card {
-    color: white;
+  span {
     position: absolute;
-    top: 18px;
+    top: 25px;
     right: 315px;
-    font-size: 30px;
+    color: white;
+    font-size: 18px;
   }
+ //  i.fa.fa-address-card {
+ //    color: white;
+ //    position: absolute;
+ //    top: 18px;
+ //    right: 315px;
+ //    font-size: 30px;
+ //  }
 
- .box1 {
-    position: absolute;
-    font-size: 8px;
-    width: 120px;
-    height: 82px;
-    top: 49px;
-    right: 310px;
-    padding-left: 10px;
-    border: solid black 1px;
-    background-color: white;
-  }
+ // .box1 {
+ //    position: absolute;
+ //    font-size: 8px;
+ //    width: 120px;
+ //    height: 82px;
+ //    top: 49px;
+ //    right: 310px;
+ //    padding-left: 10px;
+ //    border: solid black 1px;
+ //    background-color: white;
+ //  }
 
   i.fa.fa-user {
     color: white;
