@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   # before_action :set_item, only: [:show]
+  before_action :authenticate_user!
 
   def index
     @item_all = Item.order("created_at Desc").limit(6)
