@@ -12,7 +12,7 @@ $(function(){
     $('.user_info').on("mouseenter", function(){
       $('.user_info').append('<p class = "box">購入履歴</p>');
     });
-    $('.tooltip').on('mouseleave', function(){
+    $('.user_info').on('mouseleave', function(){
       $('.box').remove();
     });
   });
