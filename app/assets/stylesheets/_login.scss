@@ -6,16 +6,18 @@
       text-align: center;
       padding-top: 100px;
       font-size: 20px;
+
     a {
-      background-color: #CCFFCC;
-      margin-top: 15px;
-      padding: 5px 30px;
-      color: black;
-      border: solid white;
+      background-color: #38aef0;
+      padding: 10px 30px;
+      color: white;
+      border: solid;
       position: absolute;
-      top: 265px;
+      top: 565px;
       left: 650px;
+      font-size: 14px;
       }
+
     }
     .account-page__inner--right {
       height: 220px;
@@ -42,7 +44,7 @@
         }
         .log_in_btn {
           background-color: #38aef0;
-          margin-top: 15px;
+          margin-top: 100px;
           padding: 15px 30px;
           color: white;
           border: solid;
@@ -61,6 +63,14 @@
         top: 550px;
         left: 900px;
       }
+    }
+    .sign-up-page {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .log-in-page {
+      text-align: center;
+      margin-top: 30px;
     }
   }
 }

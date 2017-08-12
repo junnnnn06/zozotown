@@ -1,8 +1,8 @@
 #account-page.account-page
   .account-page__inner.clearfix
     .account-page__inner--left.account-page__header
-      %h2 ログイン
-      = render "devise/shared/links"
+      %h1 ログイン
+      = render "devise/shared/links", class: "sign_up_btn"
     .account-page__inner--right.user-form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field
@@ -17,3 +17,5 @@
               = f.password_field :password, autocomplete: "off"
           .actions
             = f.submit "ログイン", class: 'log_in_btn'
+    .sign-up-page
+      ↓まだアカウントをお持ちでない方はこちらへ↓

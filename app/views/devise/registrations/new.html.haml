@@ -3,7 +3,7 @@
     .account-page__inner--left.account-page__header
       %h2 Create Account
       %h5 新規アカウントの作成
-      %h6 ↓すでにアカウントをお持ちの方はこちらへ↓
+      -# %h6 ↓すでにアカウントをお持ちの方はこちらへ↓
       = render "devise/shared/links"
     .account-page__inner--right.user-form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
@@ -31,4 +31,5 @@
             = f.password_field :password_confirmation, autocomplete: "off"
         .actions
           = f.submit "Create Account", class: 'create_btn'
-
+    .log-in-page
+      ↓既にアカウントをお持ちの方↓
