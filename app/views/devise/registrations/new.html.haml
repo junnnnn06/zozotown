@@ -29,6 +29,10 @@
             = f.label :password_confirmation
           .field-input
             = f.password_field :password_confirmation, autocomplete: "off"
+        - if @noadmin
+          .field-label
+            =f.label :admin
+            = f.check_box :admin_flg, {}, true, false
         .actions
           = f.submit "Create Account", class: 'create_btn'
     .log-in-page

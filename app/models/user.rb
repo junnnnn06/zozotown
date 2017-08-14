@@ -11,4 +11,5 @@ class User < ApplicationRecord
              length: {minimum: 8}
   validates :email, presence: true, uniqueness: true
   validates :name, presence: true
+  validates :admin_flg, null: false, default: false
 end

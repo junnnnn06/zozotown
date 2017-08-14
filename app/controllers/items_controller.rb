@@ -26,7 +26,6 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    # like = Like.find_by(user_id: current_user.id, item_id: params[:item_id])
     @likes = Like.where(item_id: params[:item_id])
   end
 
