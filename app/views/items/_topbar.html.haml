@@ -29,12 +29,20 @@
           %a.drawer-menu-item{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
             設定
             %span.drawer-caret
-          -# - if user && user.admin_flg?
-          %ul.drawer-dropdown-menu
-            %li
-              %a.drawer-dropdown-menu-item{:href => "/users"} ユーザー情報
-            %li
-              %a.drawer-dropdown-menu-item{:href => "/items/new"} 管理人ページ
+          -if user && user.admin_flg == true #管理人専用ページ
+            %ul.drawer-dropdown-menu
+              %li
+                %a.drawer-dropdown-menu-item{:href => "/users"} ユーザー情報
+              %li
+                %a.drawer-dropdown-menu-item{:href => "/items/new"} 管理人ページ
+          -else #一般ユーザーページ
+            %ul.drawer-dropdown-menu
+              %li
+                %a.drawer-dropdown-menu-item{:href => "/users"} ユーザー情報
+              %li
+                %a.drawer-dropdown-menu-item{:href => ""} よくある質問
+              %li
+                %a.drawer-dropdown-menu-item{:href => ""} 初めての方へ
 .subbar
   %p.all
     すべて

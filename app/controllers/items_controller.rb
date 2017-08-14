@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @user = User.find(current_user[:id])
     @item_all = Item.order("created_at Desc").limit(6)
     @item_recommend = Item.where(recommend: 1).order("RAND()").limit(6)
     @item_ranking = Item.where(popular: 1).order("created_at Desc").limit(6)
