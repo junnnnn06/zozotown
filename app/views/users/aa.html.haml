@@ -1,2 +1,47 @@
-%link{:href => "tooltipster/dist/css/tooltipster.bundle.min.css", :rel => "stylesheet", :type => "text/css"}/
-%script{:src => "tooltipster/dist/js/tooltipster.bundle.min.js", :type => "text/javascript"}
+%body.drawer.drawer--top.drawer--navbarTopGutter
+  %header.drawer-navbar.drawer-navbar--fixed{:role => "banner"}
+    .drawer-container
+      .drawer-navbar-header
+        %a.drawer-brand{:href => ""} Drawer
+        %button.drawer-toggle.drawer-hamburger{:type => "button"}
+          %span.sr-only toggle navigation
+          %span.drawer-hamburger-icon
+      %nav.drawer-nav{:role => "navigation"}
+        %ul.drawer-menu
+          %li
+            %a.drawer-menu-item{:href => ""} Top
+          %li
+            %a.drawer-menu-item{:href => ""} Left
+          %li
+            %a.drawer-menu-item{:href => ""} Right
+          %li.drawer-dropdown
+            %a.drawer-menu-item{"aria-expanded" => "false", "data-target" => "#", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Navbar
+              %span.drawer-caret
+            %ul.drawer-dropdown-menu
+              %li
+                %a.drawer-dropdown-menu-item{:href => ""} Top
+              %li
+                %a.drawer-dropdown-menu-item{:href => ""} Left
+              %li
+                %a.drawer-dropdown-menu-item{:href => ""} Right
+          %li.drawer-dropdown
+            %a.drawer-menu-item{"aria-expanded" => "false", "data-target" => "#", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Fixed navbar
+              %span.drawer-caret
+            %ul.drawer-dropdown-menu
+              %li
+                %a.drawer-dropdown-menu-item{:href => ""} Top
+              %li
+                %a.drawer-dropdown-menu-item{:href => ""} Left
+              %li
+                %a.drawer-dropdown-menu-item{:href => ""} Right
+          %li.drawer-dropdown
+            %a.drawer-menu-item{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Sidebar
+              %span.drawer-caret
+            %ul.drawer-dropdown-menu
+              %li
+                %a.drawer-dropdown-menu-item{:href => ""} Left
+              %li
+                %a.drawer-dropdown-menu-item{:href => ""} Right

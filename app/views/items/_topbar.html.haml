@@ -1,22 +1,3 @@
-.topbar
-  %p.sitename
-    = link_to image_tag("zozotown_logo.jpg"), root_path
-
-  .user_info
-    #{current_user.name}　様
-
-  = link_to new_user_registration_path, class: "icon_register" do
-    %i.fa.fa-user{:title => "新規登録"}
-
-  = link_to new_user_session_path, class: "icon_login" do
-    %i.fa.fa-sign-in{:title => "ログイン"}
-
-  = link_to destroy_user_session_path, method: :delete, class: "icon_logout" do
-    %i.fa.fa-sign-out{:title => "ログアウト"}
-
-  = link_to new_item_path(current_user) do
-    %i.fa.fa-cog
-
 .subbar
   %p.all
     すべて
