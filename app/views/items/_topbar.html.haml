@@ -1,3 +1,40 @@
+%body.drawer.drawer--top.drawer--navbarTopGutter
+%header.drawer-navbar.drawer-navbar--fixed{:role => "banner"}
+  .drawer-container
+    .drawer-navbar-header
+      %a.drawer-brand{:href => "/items"} ZOZOTOWN
+      %button.drawer-toggle.drawer-hamburger{:type => "button"}
+        %span.sr-only toggle navigation
+        %span.drawer-hamburger-icon
+    %nav.drawer-nav{:role => "navigation"}
+      %ul.drawer-menu
+        %li.drawer-dropdown
+          %a.drawer-menu-item{"aria-expanded" => "false", "data-target" => "#", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            #{current_user.name} 様
+            %span.drawer-caret
+          %ul.drawer-dropdown-menu
+            %li
+              %a.drawer-dropdown-menu-item{:href => "/users"} マイページ
+            %li
+              %a.drawer-dropdown-menu-item{:href => "/items/:item_id/orders"} 購入履歴
+            %li
+              %a.drawer-dropdown-menu-item{:href => ""} メールマガジン
+        %li
+          %a.drawer-menu-item{:href => "/users/sign_up"} 新規登録
+        %li
+          %a.drawer-menu-item{:href => "/users/sign_in"} ログイン
+        %li
+          %a.drawer-menu-item{:href => "/users/sign_out"} ログアウト
+        %li.drawer-dropdown
+          %a.drawer-menu-item{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            設定
+            %span.drawer-caret
+          %ul.drawer-dropdown-menu
+            %li
+              %a.drawer-dropdown-menu-item{:href => "/users"} ユーザー情報
+            %li
+              %a.drawer-dropdown-menu-item{:href => "/items/new"} 管理人ページ
+
 .subbar
   %p.all
     すべて
