@@ -1,0 +1,29 @@
+= render "items/topbar"
+.my_page
+  .breadcrumb
+    .breadcrumb__root
+      = link_to "zozotown", root_path
+    .breadcrumb__account
+      　>　会員情報
+  .title
+    #{current_user.name} 様の会員情報
+  .account_info
+    .account_info__title
+      会員登録情報
+    .account_info__name
+      .account_info__name__title
+        お名前
+      .account_info__name__user
+        #{current_user.name} 様
+    .account_info__email_address
+      .account_info__email_address__title
+        メールアドレス
+      .account_info__email_address__user
+        #{current_user.email}
+    .account_info__password
+      .account_info__password__title
+        パスワード 
+      .account_info__password__user
+        ＊＊＊＊＊＊＊＊
+        セキュリティーの為、パスワードは非表示となっています。
+= render "items/rightbar"

@@ -19,17 +19,13 @@
               %a.drawer-dropdown-menu-item{:href => "/items/:item_id/orders"} 購入履歴
             %li
               %a.drawer-dropdown-menu-item{:href => ""} メールマガジン
-        %li
-          %a.drawer-menu-item{:href => "/users/sign_up"} 新規登録
-        %li
-          %a.drawer-menu-item{:href => "/users/sign_in"} ログイン
-        %li
-          %a.drawer-menu-item{:href => "/users/sign_out"} ログアウト
+            %li
+              %a.drawer-dropdown-menu-item{:href => "/users/sign_out"} ログアウト
         %li.drawer-dropdown
           %a.drawer-menu-item{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
             設定
             %span.drawer-caret
-          -if user && user.admin_flg == true #管理人専用ページ
+          -if @user && @user.admin_flg == true #管理人専用ページ
             %ul.drawer-dropdown-menu
               %li
                 %a.drawer-dropdown-menu-item{:href => "/users"} ユーザー情報
