@@ -10,9 +10,8 @@ class OrdersController < ApplicationController
       @item = Item.find(params[:item_id])
       @item.count -= 1
       @item.save
-      @order.save
-      NoticeMailer.sendmail_confirm(current_user).deliver
-      redirect_to root_path, notice: "商品を購入しました"
+      NoticeMailer.sendmail_confirm(current_user).deliver_now
+      redirect_to root_path, notice: "商品を購入しました。"
     else
       redirect_to item_path, alert: "購入に失敗しました"
     end
