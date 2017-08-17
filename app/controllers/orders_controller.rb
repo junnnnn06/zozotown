@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
       @item.count -= 1
       @item.save
       NoticeMailer.sendmail_confirm(current_user).deliver_now
-      redirect_to root_path, notice: "商品を購入しました。"
+      redirect_to root_path, notice: "商品を購入しました。完了の場合はメールが届きますのでご確認をお願いいたします。"
     else
       redirect_to item_path, alert: "購入に失敗しました"
     end
