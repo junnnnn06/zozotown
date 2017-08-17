@@ -5,9 +5,9 @@ class NoticeMailer < ApplicationMailer
   #
   #   en.notice_mailer.sendmail_confirm.subject
   #
-  def sendmail_confirm
+  def sendmail_confirm(user)
     @greeting = "Hi"
-
-    mail to: "user@sample.com", subject: "ActionMailer test"
+    @user = user
+    mail to: "user@sample.com", subject: "ご購入ありがとうございます"
   end
 end
