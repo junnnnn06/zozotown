@@ -1,0 +1,12 @@
+= render 'items/topbar'
+.user_info
+  #{current_user.name} 様
+.purchase_history
+  購入履歴
+  .purchase_history__item
+    %ul
+      %li
+        %p.purchase_history__item_name
+          商品
+        %p.purchase_history__item_price
+          金額

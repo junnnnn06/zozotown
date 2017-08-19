@@ -1,11 +1,12 @@
 class OrdersController < ApplicationController
 
   def index
+    @order = User.find(current_user[:id])
   end
 
   def create
-
     @order = Order.new(order_params)
+    # binding.pry
     if @order.save
       @item = Item.find(params[:item_id])
       @item.count -= 1

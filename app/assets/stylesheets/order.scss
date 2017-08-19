@@ -1,3 +1,22 @@
 // Place all the styles related to the order controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user_info {
+  padding-left: 300px;
+}
+
+.purchase_history {
+  height: 100%;
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 300px;
+  font-size: 25px;
+  &__item {
+    ul {
+      li {
+        font-size: 20px;
+        list-style: none;
+      }
+    }
+  }
+}
