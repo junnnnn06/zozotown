@@ -13,9 +13,23 @@
   font-size: 25px;
   &__item {
     ul {
+      height: 200px;
+      width: 800px;
+      background-color: #D7EEFF;
+      padding-bottom: 60px;
+      border-top: solid 0.5px #CCCCCC;
+      border-bottom: solid 0.5px #CCCCCC;
       li {
         font-size: 20px;
         list-style: none;
+        p.purchase_history__item_image {
+          float: left;
+          clear: both;
+        }
+        .purchase_history__item_detail {
+          padding-top: 5px;
+          padding-left: 400px;
+        }
       }
     }
   }

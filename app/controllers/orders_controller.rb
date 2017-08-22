@@ -1,12 +1,12 @@
 class OrdersController < ApplicationController
 
   def index
-    @order = User.find(current_user[:id])
+    # binding.pry
+    @orders = current_user.orders(params[:id])
   end
 
   def create
     @order = Order.new(order_params)
-    # binding.pry
     if @order.save
       @item = Item.find(params[:item_id])
       @item.count -= 1
@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.permit(:item_id).merge(user_id: current_user.id)
+    params.permit(:item_id).merge(user_id: current_user.id, item_name: params[:name], item_price: params[:price], item_image: params[:image])
   end
 
   def count_params

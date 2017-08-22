@@ -4,9 +4,17 @@
 .purchase_history
   購入履歴
   .purchase_history__item
-    %ul
-      %li
-        %p.purchase_history__item_name
-          商品
-        %p.purchase_history__item_price
-          金額
+    - @orders.each do |orders|
+      %ul
+        %li
+          %p.purchase_history__item_image
+            = image_tag orders.item_image
+          .purchase_history__item_detail
+            %p.purchase_history__user_detail__name
+              お名前 : #{current_user.name} 様
+            %p.purchase_history__item_detail__name
+              商品名 : #{orders.item_name}
+            %p.purchase_history__item_detail__price
+              金額 : ¥#{orders.item_price}
+            %p.purchase_history__item_detail__purchase_date
+              購入日 : #{orders.created_at}
