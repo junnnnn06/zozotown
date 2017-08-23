@@ -1,9 +1,8 @@
-#account-page.account-page
-  .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
+#log-in-page.log-in-page
+  .log-in-page__inner.clearfix
+    .log-in-page__inner--left.log-in-page__header
       %h1 ログイン
-      = render "devise/shared/links", class: "sign_up_btn"
-    .account-page__inner--right.user-form
+    .log-in-page__inner--right.user-form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field
           .field-label
@@ -17,5 +16,6 @@
               = f.password_field :password, autocomplete: "off"
           .actions
             = f.submit "ログイン", class: 'log_in_btn'
-    .sign-up-page
-      ↓まだアカウントをお持ちでない方はこちらへ↓
+          .sign-up-page
+            ↓まだアカウントをお持ちでない方はこちらへ↓
+          = render "devise/shared/links"

@@ -3,8 +3,6 @@
     .account-page__inner--left.account-page__header
       %h2 Create Account
       %h5 新規アカウントの作成
-      -# %h6 ↓すでにアカウントをお持ちの方はこちらへ↓
-      = render "devise/shared/links"
     .account-page__inner--right.user-form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = devise_error_messages!
@@ -30,10 +28,12 @@
           .field-input
             = f.password_field :password_confirmation, autocomplete: "off"
         - if @noadmin
-          .field-label
+          .field-labels
             =f.label :admin
             = f.check_box :admin_flg, {}, true, false
         .actions
           = f.submit "Create Account", class: 'create_btn'
-    .log-in-page
-      ↓既にアカウントをお持ちの方↓
+        .user-log-in
+          ↓既にアカウントをお持ちの方↓
+          <br>
+        = render "devise/shared/links"
