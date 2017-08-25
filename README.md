@@ -2,7 +2,7 @@
 
 |Column|type|option|
 |------|----|------|
-|nickname|string|null: false|
+|name|string|null: false|
 |adress|string|null: false|
 |email|string|null: false|
 |password|integer|null: false|
@@ -15,23 +15,14 @@
 ## orderテーブル
 |Column|type|option|
 |------|----|------|
-|name|string|null: false|
-|postal_code|integer|null: false|
-|adress|text|null: false|
-|tel|integer|null: false|
-|check_out|select|null: false|
+|user_id|integer|null: false|
+|item_id|integer|null: false|
+|item_image|text|null: false|
+|item_name|integer|null: false|
+|item_price|select|null: false|
 
 ## Association
 - belongs_to :user
-- has_many :items
-
-
-## categoryテーブル
-|Column|type|option|
-|------|----|------|
-|name|string|null: false|
-
-## Association
 - has_many :items
 
 ## itemsテーブル
@@ -49,13 +40,3 @@
 - belongs_to :category
 - belongs_to :user
 - belongs_to :order
-
-favaritesテーブル
-||Column|type|option|
-|------|----|------|
-|item|string|null: false|
-|brand|string|null: false|
-|shop|string|null: false|
-
-## Association
-- belongs_to :user

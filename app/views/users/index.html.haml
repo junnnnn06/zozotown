@@ -22,7 +22,9 @@
         #{current_user.email}
     .account_info__password
       .account_info__password__title
-        パスワード 
+        パスワード
       .account_info__password__user
         ＊＊＊＊＊＊＊＊
         セキュリティーの為、パスワードは非表示となっています。
+  .update_btn
+    = link_to "→ユーザー情報の変更←", user_registration_path, method: :PATCH, class: "btn"
