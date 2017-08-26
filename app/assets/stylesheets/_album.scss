@@ -1,0 +1,16 @@
+.album {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  .album img {
+    .album .img1 {
+      display: block;
+      margin: 0 auto;
+    }
+    .album .img2 {
+      position: absolute;
+      top: 0;
+      left: 25%;
+    }
+  }
+}
