@@ -77,3 +77,5 @@ gem 'erb2haml'
 gem 'devise_invitable'
 gem 'i18n'
 gem 'pry-byebug'
+gem 'html2haml'
+
