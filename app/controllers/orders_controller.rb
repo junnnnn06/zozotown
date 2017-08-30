@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   def index
     # binding.pry
     @orders = current_user.orders(params[:id])
+    @item = current_user.orders(params[:item_id])
   end
 
   def create

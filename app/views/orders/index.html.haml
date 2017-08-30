@@ -18,3 +18,4 @@
               金額 : ¥#{orders.item_price}
             %p.purchase_history__item_detail__purchase_date
               購入日 : #{orders.created_at}
+            = link_to "この商品についてレビューを書く", new_item_review_path(orders.item.id)

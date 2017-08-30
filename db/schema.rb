@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829045514) do
+ActiveRecord::Schema.define(version: 20170830071509) do
 
   create_table "admin_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -63,10 +63,9 @@ ActiveRecord::Schema.define(version: 20170829045514) do
 
   create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "star_rate"
-    t.text     "reviwe",     limit: 65535
+    t.text     "review",     limit: 65535
     t.integer  "user_id"
     t.integer  "item_id"
-    t.integer  "order_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

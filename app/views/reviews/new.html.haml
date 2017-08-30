@@ -1,26 +1,36 @@
+= render "items/topbar"
+
 .review
-  .review__title
-    感想を入力して下さい。
-  .review__star
-    %form{:action => "#", :type => "get"}
-      .evaluation
-        %input#star1{:name => "star", :type => "radio", :value => "5"}/
-        %label{:for => "star1"}
-          %span.text> 最高
-          ★
-        %input#star2{:name => "star", :type => "radio", :value => "4"}/
-        %label{:for => "star2"}
-          %span.text> 良い
-          ★
-        %input#star3{:name => "star", :type => "radio", :value => "3"}/
-        %label{:for => "star3"}
-          %span.text> 普通
-          ★
-        %input#star4{:name => "star", :type => "radio", :value => "2"}/
-        %label{:for => "star4"}
-          %span.text> 悪い
-          ★
-        %input#star5{:name => "star", :type => "radio", :value => "1"}/
-        %label{:for => "star5"}
-          %span.text> 最悪
-          ★
+  感想を入力してください
+  .review-wrapper
+    .review-title
+      タイトル
+    .field
+      = form_for [@item, @review] do |f|
+        .evaluation
+          %input#star1{ :name => "star_rate", :type => "radio", :value => "5"}/
+          %label{:for => "star1"}
+            %span.text> 最高
+            ★
+          %input#star2{ :name => "star_rate", :type => "radio", :value => "4"}/
+          %label{:for => "star2"}
+            %span.text> 良い
+            ★
+          %input#star3{ :name => "star_rate", :type => "radio", :value => "3"}/
+          %label{:for => "star3"}
+            %span.text> 普通
+            ★
+          %input#star4{ :name => "star_rate", :type => "radio", :value => "2"}/
+          %label{:for => "star4"}
+            %span.text> 悪い
+            ★
+          %input#star5{ :name => "star_rate", :type => "radio", :value => "1"}/
+          %label{:for => "star5"}
+            %span.text> 最悪
+            ★
+
+        .field-label
+          = f.label :review
+          = f.text_area :review, class: "review-field", placeholder: "感想を入力して下さい(500字以内)", maxlength: "500"
+        .field-label
+        = f.submit "Send", class: "review-submit__btn"
