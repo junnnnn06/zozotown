@@ -76,10 +76,43 @@
     }
   }
 
+  .check:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  .review {
+    background-color: white;
+    display:inline-block;
+    height: 250px;
+    width: 310px;
+    border: dotted 2px #DDDDDD;
+    font-size: 14px;
+    vertical-align: top;
+    margin-bottom: 10px;
+    margin-right: 2px;
+    &__star_rate {
+      color: #FFFF00;
+      text-align: left;
+    }
+    &__date {
+      text-align: left;
+      padding: 10px 0;
+      color: #666666;
+    }
+    &__review {
+      text-align: left;
+    }
+    &__icon {
+      padding-top: 20px;
+    }
+  }
+
   .sold-out {
     &__title {
       text-align: center;
-      border-bottom:1px solid #BBBBBB;
+      border-bottom:1px solid #EEEEEE;
     }
     &__info {
       padding-top: 40px;
