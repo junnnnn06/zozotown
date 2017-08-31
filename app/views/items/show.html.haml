@@ -35,6 +35,12 @@
         = link_to  "この商品を購入する", item_orders_path(@item, name: @item.name, price: @item.price, image: @item.image ), method: :POST, class: "btn_submit"
       .check__return
         = link_to "購入をキャンセルする", root_path
+    .review
+      - @review.each do |review|
+        .review__star_rate
+          #{review.star_rate}
+        .review__review
+          #{review.review}
 
   - else @item.count = 0
     .sold-out

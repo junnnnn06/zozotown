@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     # binding.pry
     if @review.save
-      redirect_to root_path
+      redirect_to root_path, notice: 'レビュー入力ありがとうございました。'
     else
       render :new
     end

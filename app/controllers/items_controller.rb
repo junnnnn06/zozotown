@@ -13,9 +13,6 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
-  def edit
-  end
-
   def create
     @item = Item.new(item_params)
     if @item.save
@@ -26,7 +23,9 @@ class ItemsController < ApplicationController
   end
 
   def show
+    # binding.pry
     @item = Item.find(params[:id])
+    @review = @item.reviews.order("created_at Desc")
     @likes = Like.where(item_id: params[:item_id])
   end
 
@@ -34,10 +33,6 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:image, :name, :price, :description, :count, :number, :recommend, :popular)
-  end
-
-  def set_item
-
   end
 
 end
