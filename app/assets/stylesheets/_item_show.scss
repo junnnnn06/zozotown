@@ -62,9 +62,23 @@
     }
     &__return {
       float: left;
-      margin-left: 300px;
+      margin-left: 150px;
       height: 50px;
       width: 170px;
+      font-size: 16px;
+      color: white;
+      background-color: #38AEF0;
+      border: none;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      line-height: 50px;
+      text-align: center;
+    }
+    &__comment {
+      float: left;
+      margin-left: 150px;
+      height: 50px;
+      width: 210px;
       font-size: 16px;
       color: white;
       background-color: #38AEF0;

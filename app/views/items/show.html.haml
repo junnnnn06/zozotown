@@ -35,6 +35,8 @@
         = link_to  "この商品を購入する", item_orders_path(@item, name: @item.name, price: @item.price, image: @item.image ), method: :POST, class: "btn_submit"
       .check__return
         = link_to "購入をキャンセルする", root_path
+      .check__comment
+        = link_to "この商品のレビューを書く", new_item_review_path(@item.id)
     - @review.each do |review|
       .review
         .review__star_rate
