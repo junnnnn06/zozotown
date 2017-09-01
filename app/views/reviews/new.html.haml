@@ -30,7 +30,7 @@
             ★
 
         .field-label
-          = f.label :review
+          = f.label :review, style: "display: none;"
           = f.text_area :review, class: "review-field", placeholder: "感想を入力して下さい(500字以内)", maxlength: "500"
         .field-label
         = f.submit "Send", class: "review-submit__btn"
