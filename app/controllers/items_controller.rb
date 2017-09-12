@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @earning_ranking = Order.order("item_name Desc").limit(5)
     @chart_data = Order.group(:item_name).count
     @user = User.find(current_user[:id])
     @item_all = Item.order("created_at Desc").limit(6)

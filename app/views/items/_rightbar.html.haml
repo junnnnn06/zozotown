@@ -1,17 +1,9 @@
 .rightbar
   .title
-    ショップニュース
-  %ul
-    %li
-      おすすめ1
-    %li
-      おすすめ2
-    %li
-      おすすめ3
-    %li
-      おすすめ4
-    %li
-      おすすめ5
+    ランキング
+  .ranking
+    - earning_ranking.each do |ranking|
+      #{ranking.item_name}
 
   .title
     ニュース
@@ -26,4 +18,3 @@
       おすすめ4
     %li
       おすすめ5
-

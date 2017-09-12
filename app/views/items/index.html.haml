@@ -1,9 +1,9 @@
-= render "topbar", chart_data: @chart_data
+= render "topbar"
 = render "leftbar"
 = render "content", item_recommend: @item_recommend, item_ranking: @item_ranking, item_all: @item_all, user: @user, review: @review
-= render "rightbar"
+= render "rightbar", earning_ranking: @earning_ranking
 
 %p#page-top
   %a{:href => "#wrap"} PAGE TOP
-%p#graph
-  = pie_chart (@chart_data)
+%p.graph
+  -# = bar_chart @chart_data, height: "600px", width: "300px"
