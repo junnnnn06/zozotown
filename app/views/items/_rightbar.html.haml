@@ -7,7 +7,7 @@
         第#{i}位
       .ranking_image
         -# -binding.pry
-        = link_to image_tag ranking, item_path(orders)
+        = link_to image_tag(ranking[0]),item_path(ranking[1])
 
   .title
     ニュース
