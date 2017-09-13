@@ -3,8 +3,8 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @earning_ranking = Order.order("item_name Desc").limit(5)
-    @chart_data = Order.group(:item_name).count
+    @earning_ranking = Order.group(:item_image).order('count_item_image Desc').limit(5).count(:item_image).keys
+    # @orders = Order.find(params[:item_id])
     @user = User.find(current_user[:id])
     @item_all = Item.order("created_at Desc").limit(6)
     @item_recommend = Item.where(recommend: 1).order("RAND()").limit(6)

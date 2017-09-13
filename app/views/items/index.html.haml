@@ -1,7 +1,7 @@
 = render "topbar"
 = render "leftbar"
 = render "content", item_recommend: @item_recommend, item_ranking: @item_ranking, item_all: @item_all, user: @user, review: @review
-= render "rightbar", earning_ranking: @earning_ranking
+= render "rightbar", earning_ranking: @earning_ranking, user: @user, orders: @orders
 
 %p#page-top
   %a{:href => "#wrap"} PAGE TOP

@@ -1,9 +1,13 @@
 .rightbar
   .title
-    ランキング
+    購入ランキング
   .ranking
-    - earning_ranking.each do |ranking|
-      #{ranking.item_name}
+    - earning_ranking.each.with_index(1) do |ranking, i|
+      .ranking_rank
+        第#{i}位
+      .ranking_image
+        -# -binding.pry
+        = link_to image_tag ranking, item_path(orders)
 
   .title
     ニュース

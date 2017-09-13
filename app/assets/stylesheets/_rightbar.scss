@@ -8,6 +8,37 @@
     color: black;
     border-bottom: none;
   }
+  .ranking {
+    .ranking_rank{
+      text-align: center;
+      font-size: 18px;
+      position: relative;
+      display: inline-block;
+      padding: 0 55px;
+    }
+    .ranking_rank:before, .ranking_rank:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: inline-block;
+      width: 45px;
+      height: 2px;
+      border-top: solid 1px black;
+      border-bottom: solid 1px black;
+    }
+    .ranking_rank:before {
+      left: 0;
+    }
+    .ranking_rank:after {
+      right: 0;
+    }
+    .ranking_image {
+      img {
+        height: 160px;
+        width: 160px;
+      }
+    }
+  }
 
   ul {
     list-style: none;
